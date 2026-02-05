@@ -57,7 +57,7 @@ export default function CreateProductPage() {
     if (loading) return <p>Cargando...</p>;
 
     return (
-        <div className="form-container table-container-users">
+        <div className="form-container table-container-users create-product-container">
             <h1 className="form-title">
                 {isEdit ? "Editar producto" : "Crear producto"}
             </h1>

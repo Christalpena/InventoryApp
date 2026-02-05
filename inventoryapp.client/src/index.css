@@ -1,11 +1,12 @@
 ﻿@import url('https://fonts.googleapis.com');
 
-html,body {
+html, body {
     font-family: 'Poppins', sans-serif;
     background-color: #FAFAFA;
-    margin:0px;
-    padding-right:20px;
-    height:100%
+    margin: 0px;
+    padding-right: 20px;
+    height: 100%;
+    padding: 0px;
 }
 
 .root{
@@ -18,13 +19,17 @@ main{
 }
 .admin-layout {
     display: flex;
-    min-height:100vh
+    min-height:100vh;
+    margin-right:20px;
 }
 
 .admin-content {
     width: 100%;
 }
 
+.create-product-container{
+    width: 97% 
+}
 /*LOGIN*/
 .login-page {
     min-height: 100vh;

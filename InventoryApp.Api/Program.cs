@@ -1,4 +1,5 @@
 ﻿using InventoryApp.Api.Data;
+using InventoryApp.Api.Models;
 using InventoryApp.Api.Models.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -65,6 +66,24 @@ builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+//USUARIO INICIAL
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    if (!context.Users.Any(u => u.Username == "admin"))
+    {
+        context.Users.Add(new User
+        {
+            Username = "admin",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin"),
+            RoleId = 1
+        });
+
+        context.SaveChanges();
+    }
+}
 
 // PIPELINE
 app.UseHttpsRedirection();

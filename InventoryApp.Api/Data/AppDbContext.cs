@@ -28,17 +28,6 @@ namespace InventoryApp.Api.Data
                 new Role { Id = 1, Name = "Admin" },
                 new Role { Id = 2, Name = "User" }
             );
-
-            //Usuario admin inicial
-            modelBuilder.Entity<User>().HasData(
-                new User
-                {
-                    Id = 1,
-                    Username = "admin",
-                    PasswordHash = "admin123",
-                    RoleId = 1
-                }
-            );
         }
     }
 }
