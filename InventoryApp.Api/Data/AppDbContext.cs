@@ -35,7 +35,7 @@ namespace InventoryApp.Api.Data
                 {
                     Id = 1,
                     Username = "admin",
-                    PasswordHash = "TEMP_HASH",
+                    PasswordHash = "admin123",
                     RoleId = 1
                 }
             );
