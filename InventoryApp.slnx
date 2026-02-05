@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="InventoryApp.Api/InventoryApp.Api.csproj" Id="9ae6c458-203b-40d5-8677-457b2388dc40" />
+  <Project Path="inventoryapp.client/inventoryapp.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
